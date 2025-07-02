@@ -1,11 +1,9 @@
-# app.py (vulnerable Python Flask app)
 from flask import Flask, request
 import sqlite3
 import subprocess
 
 app = Flask(__name__)
 
-# Critical vuln: SQL Injection
 @app.route('/user')
 def get_user():
     username = request.args.get('username')
@@ -16,7 +14,6 @@ def get_user():
     conn.close()
     return str(result)
 
-# Critical vuln: OS Command Injection
 @app.route('/ping')
 def ping():
     ip = request.args.get('ip')
