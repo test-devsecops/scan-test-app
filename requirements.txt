@@ -1,3 +1,2 @@
 flask==1.1.2        # CVE-2020-28474 - High
 requests==2.19.1    # CVE-2018-18074 - Medium
-pyyaml==5.3         # CVE-2020-1747 - High
