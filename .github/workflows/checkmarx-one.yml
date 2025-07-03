@@ -36,6 +36,12 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: check data
+        run : |
+          echo ${{ secrets.CX_CLIENT_ID }}
+          echo ${{ secrets.CX_CLIENT_SECRET }}
+          echo ${{ secrets.CX_TENANT }}
+          
       # This step checks out a copy of your repository.
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -53,3 +59,4 @@ jobs:
         with:
           # Path to SARIF file relative to the root of the repository
           sarif_file: cx_result.sarif
+      
