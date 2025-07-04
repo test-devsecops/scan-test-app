@@ -13,6 +13,7 @@ def get_user():
     result = cursor.execute(query).fetchall()
     conn.close()
     return str(result)
+    
 
 @app.route('/ping')
 def ping():
