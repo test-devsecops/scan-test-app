@@ -4,6 +4,7 @@ import subprocess
 
 app = Flask(__name__)
 
+
 @app.route('/user')
 def get_user():
     username = request.args.get('username')
