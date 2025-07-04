@@ -14,7 +14,6 @@ def get_user():
     conn.close()
     return str(result)
 
-
 @app.route('/ping')
 def ping():
     ip = request.args.get('ip')
