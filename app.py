@@ -3,13 +3,13 @@ import sqlite3
 import subprocess
 
 app = Flask(__name__)
-
+# testing
 @app.route('/user')
 def get_user():
     username = request.args.get('username')
     conn = sqlite3.connect('users.db')
     cursor = conn.cursor()
-    query = f"SELECT * FROM users WHERE username = '{username}'"  # vulnerable
+    query = f"SELECT * FROM users WHERE username = '{username}'"
     result = cursor.execute(query).fetchall()
     conn.close()
     return str(result)
