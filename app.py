@@ -9,16 +9,25 @@ def get_user():
     username = request.args.get('username')
     conn = sqlite3.connect('users.db')
     cursor = conn.cursor()
-    query = f"SELECT * FROM users WHERE username = '{username}'" 
+    query = f"SELECT * FROM users WHERE username = '{username}'"  
     result = cursor.execute(query).fetchall()
     conn.close()
     return str(result)
+
+# testing
 
 @app.route('/ping')
 def ping():
     ip = request.args.get('ip')
     return subprocess.getoutput(f"ping -c 1 {ip}") 
     # test
+
+username = "test"
+password = "password"
+
+import subprocess
+ip = input("Enter IP: ")
+subprocess.call("ping " + ip, shell=True)
 
 import ssl
 import urllib.request
