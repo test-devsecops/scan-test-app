@@ -21,7 +21,8 @@ def ping():
     ip = request.args.get('ip')
     return subprocess.getoutput(f"ping -c 1 {ip}") 
     # test
-
+username = "testing"
+password = "password"
 
 import subprocess
 ip = input("Enter IP: ")
