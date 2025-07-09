@@ -18,6 +18,7 @@ def get_user():
 def ping():
     ip = request.args.get('ip')
     return subprocess.getoutput(f"ping -c 1 {ip}") 
+    # test
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
