@@ -21,7 +21,9 @@ def ping():
     ip = request.args.get('ip')
     return subprocess.getoutput(f"ping -c 1 {ip}") 
     # test
+ 
 # test_2
+
 
 import ssl
 import urllib.request
