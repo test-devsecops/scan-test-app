@@ -23,7 +23,8 @@ def ping():
     # test
  
 # test_2
-
+username = "admin"
+password = "supersecret"
 
 import ssl
 import urllib.request
