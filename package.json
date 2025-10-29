@@ -1,0 +1,23 @@
+{
+  "name": "vulnerable-dev-deps-demo",
+  "version": "1.0.0",
+  "description": "A demo project with vulnerable devDependencies for testing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Testing...\" && exit 0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "4.17.20",
+    "express": "4.16.0", 
+    "handlebars": "4.7.6",     
+  },
+  "devDependencies": {
+    "lodash": "4.17.20",               
+    "minimist": "1.2.0",               
+    "jquery": "3.4.0",                 
+    "tar": "4.4.2",                    
+    "glob-parent": "5.1.1",           
+    "chokidar": "3.3.0"                
+  }
+}

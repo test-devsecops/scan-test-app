@@ -1,6 +1,5 @@
 # Dockerfile (vulnerable)
-FROM python:3.7  # old and unsupported version
-
+FROM python:3.7  
 # Critical vuln: running as root user (default)
 WORKDIR /app
 
